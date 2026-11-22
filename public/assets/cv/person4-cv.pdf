@@ -1,0 +1,99 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R] /Count 2 >>
+endobj
+4 0 obj
+<< /Length 5978 >>
+stream
+BT /F2 18 Tf 0.07 0.12 0.25 rg 1 0 0 1 54 742 Tm (Maya Chakraborty) Tj ET
+BT /F1 10.5 Tf 0.25 0.29 0.36 rg 1 0 0 1 54 720 Tm (Doctoral Researcher \(Ph.D. Candidate\) | Department of Earth & Environmental Sciences) Tj ET
+BT /F1 10.5 Tf 0.25 0.29 0.36 rg 1 0 0 1 54 706 Tm (Horizon Institute of Technology   Meridian Research Collective) Tj ET
+BT /F1 8.8 Tf 0.35 0.38 0.44 rg 1 0 0 1 54 692 Tm (Email: m.chakraborty@horizon-tech.edu  |  Phone: +1 \(617\) 555-0197) Tj ET
+BT /F1 8.8 Tf 0.35 0.38 0.44 rg 1 0 0 1 54 680 Tm (Address: Room 319, Earth Sciences Pavilion, 140 Observatory Way, Cambridge, MA 02138) Tj ET
+BT /F2 10.5 Tf 0.12 0.23 0.54 rg 1 0 0 1 54 660 Tm (PROFILE & RESEARCH INTERESTS) Tj ET
+0.75 w 0.82 0.84 0.88 RG 54 649 m 558 649 l S
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 638 Tm (Maya Chakraborty is a fourth-year Ph.D. candidate investigating mountain cryosphere) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 625 Tm (hydrology and glacial meltwater contributions to downstream basins. Combining Sentinel-1) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 612 Tm (interferometric synthetic aperture radar \(InSAR\), high-resolution optical) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 599 Tm (stereogrammetry, and in-situ stream gauging, her doctoral research develops reproducible) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 586 Tm (cloud-native geospatial pipelines to track seasonal glacier velocity and meltwater) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 573 Tm (storage.) Tj ET
+BT /F2 9.3 Tf 0.10 0.12 0.16 rg 1 0 0 1 54 556 Tm (Research Interests: Cryosphere & Glacial Hydrology  |  Interferometric SAR \(InSAR\)  |  Cloud-Native Geospatial Pipelines  |  Alpine Watershed Modeling) Tj ET
+BT /F2 10.5 Tf 0.12 0.23 0.54 rg 1 0 0 1 54 535 Tm (ACADEMIC QUALIFICATIONS) Tj ET
+0.75 w 0.82 0.84 0.88 RG 54 524 m 558 524 l S
+BT /F2 9.3 Tf 0.10 0.12 0.16 rg 1 0 0 1 54 513 Tm (Ph.D. Candidate in Earth & Cryosphere Sciences \(2026 \(Expected\)\)   Horizon Institute of Technology) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 500 Tm (Specialization: Glacial Meltwater Dynamics & Multi-Sensor Radar | Horizon Presidential Doctoral Fellowship Recipient) Tj ET
+BT /F2 9.3 Tf 0.10 0.12 0.16 rg 1 0 0 1 54 487 Tm (M.Sc. in Geomatics & Water Engineering \(2022\)   Delft University of Technology \(TU Delft\)) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 474 Tm (Specialization: Hydrological Remote Sensing | Cum Laude Honours) Tj ET
+BT /F2 9.3 Tf 0.10 0.12 0.16 rg 1 0 0 1 54 461 Tm (B.Tech. in Geoinformatics Engineering \(2020\)   Anna University) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 448 Tm (Specialization: Satellite Image Processing & Surveying | University Gold Medalist) Tj ET
+BT /F2 10.5 Tf 0.12 0.23 0.54 rg 1 0 0 1 54 427 Tm (SELECTED RESEARCH PROJECTS) Tj ET
+0.75 w 0.82 0.84 0.88 RG 54 416 m 558 416 l S
+BT /F2 9.3 Tf 0.10 0.12 0.16 rg 1 0 0 1 54 405 Tm (High-Mountain Glacial Runoff & InSAR Velocity Observatory [Ongoing, 2022   Present]) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 392 Tm (Lead Doctoral Researcher: Coupling Sentinel-1 offset-tracking glacier surface velocities) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 379 Tm (with alpine stream conductivity sensors to partition snowmelt vs. ice-melt runoff.) Tj ET
+BT /F2 9.3 Tf 0.10 0.12 0.16 rg 1 0 0 1 54 366 Tm (Open Snow-Cover Fraction Benchmark from Harmonized Landsat-Sentinel [Completed, 2022   2024]) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 353 Tm (Primary Author & Developer: Cloud-native Python package and curated validation dataset) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 340 Tm (for sub-pixel snow cover mapping in complex shaded alpine terrain.) Tj ET
+BT /F2 10.5 Tf 0.12 0.23 0.54 rg 1 0 0 1 54 319 Tm (SELECTED PUBLICATIONS) Tj ET
+0.75 w 0.82 0.84 0.88 RG 54 308 m 558 308 l S
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 297 Tm ([2024] Chakraborty, M., & Sen, A. "Sub-seasonal velocity acceleration on debris-covered) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 284 Tm (valley glaciers revealed by dense Sentinel-1 interferometry." The Cryosphere, Vol. 18,) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 271 Tm (pp. 2410 2428. DOI: 10.5194/tc-18-2410-2024) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 258 Tm ([2024] Chakraborty, M., & Al-Mansoor, T. "Topographic shadow correction in harmonized) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 245 Tm (Landsat-Sentinel snow-cover retrievals." EGU General Assembly Abstracts, EGU24-11820.) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 232 Tm (DOI: 10.5194/egusphere-egu24-11820) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 219 Tm ([2023] Chakraborty, M. "Reproducible Hydrological Workflows in Cloud-Native Earth) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 206 Tm (Observation." Advances in Mountain Hydrology and Remote Sensing \(Ch. 4\). DOI:) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 193 Tm (10.1007/978-3-031-41209-7_4) Tj ET
+BT /F2 10.5 Tf 0.12 0.23 0.54 rg 1 0 0 1 54 172 Tm (ACADEMIC EXPERIENCE) Tj ET
+0.75 w 0.82 0.84 0.88 RG 54 161 m 558 161 l S
+BT /F2 9.3 Tf 0.10 0.12 0.16 rg 1 0 0 1 54 150 Tm (Teaching: Graduate Teaching Fellow   Introduction to GIS & Spatial Analysis \(EES 204\) \(2022   2024\)   Horizon Institute of Technology) Tj ET
+BT /F2 9.3 Tf 0.10 0.12 0.16 rg 1 0 0 1 54 137 Tm (Research: Doctoral Researcher \(2022   Present\)   Meridian Research Collective, Horizon Institute of Technology) Tj ET
+BT /F2 9.3 Tf 0.10 0.12 0.16 rg 1 0 0 1 54 124 Tm (Workshops & Training: Participant & Presenter   Cryosphere Remote Sensing Summer School \(2023\)   Karthaus Glaciology Workshop, Italy) Tj ET
+BT /F2 9.3 Tf 0.10 0.12 0.16 rg 1 0 0 1 54 111 Tm (Workshops & Training: Wilderness First Responder & Alpine Field Safety Certification \(2023\)   SOLO Wilderness Medicine) Tj ET
+BT /F2 10.5 Tf 0.12 0.23 0.54 rg 1 0 0 1 54 90 Tm (TECHNICAL & RESEARCH SKILLS) Tj ET
+0.75 w 0.82 0.84 0.88 RG 54 79 m 558 79 l S
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 3 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 652 >>
+stream
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 742 Tm (Technical: Glacial Mass Balance Modeling, Differential InSAR & Offset Tracking,) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 729 Tm (Catchment Hydrological Simulation, Topographic Radiometric Correction) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 716 Tm (Tools & Software: ISCE2 / MintPy, Google Earth Engine, HEC-HMS, Dask / Pangeo Stack) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 703 Tm (Programming: Python \(Xarray, GeoPandas, PyGMT\), R, Shell Scripting, LaTeX) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 690 Tm (GIS / Remote Sensing: QGIS, SNAP ESA, GDAL, SAGA GIS) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 3 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Type /Catalog /Pages 3 0 R >>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000000154 00000 n 
+0000000217 00000 n 
+0000006247 00000 n 
+0000006383 00000 n 
+0000007086 00000 n 
+0000007222 00000 n 
+trailer
+<< /Size 9 /Root 8 0 R >>
+startxref
+7271
+%%EOF

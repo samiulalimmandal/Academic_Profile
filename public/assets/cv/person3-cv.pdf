@@ -1,0 +1,99 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R] /Count 2 >>
+endobj
+4 0 obj
+<< /Length 5970 >>
+stream
+BT /F2 18 Tf 0.07 0.12 0.25 rg 1 0 0 1 54 742 Tm (Dr. Tariq Al-Mansoor) Tj ET
+BT /F1 10.5 Tf 0.25 0.29 0.36 rg 1 0 0 1 54 720 Tm (Senior Research Fellow in Environmental IoT | School of Computing & Data Science) Tj ET
+BT /F1 10.5 Tf 0.25 0.29 0.36 rg 1 0 0 1 54 706 Tm (Horizon Institute of Technology   Meridian Research Collective) Tj ET
+BT /F1 8.8 Tf 0.35 0.38 0.44 rg 1 0 0 1 54 692 Tm (Email: t.almansoor@horizon-tech.edu  |  Phone: +1 \(617\) 555-0164) Tj ET
+BT /F1 8.8 Tf 0.35 0.38 0.44 rg 1 0 0 1 54 680 Tm (Address: Room 412, Turing Computing Wing, 140 Observatory Way, Cambridge, MA 02138) Tj ET
+BT /F2 10.5 Tf 0.12 0.23 0.54 rg 1 0 0 1 54 660 Tm (PROFILE & RESEARCH INTERESTS) Tj ET
+0.75 w 0.82 0.84 0.88 RG 54 649 m 558 649 l S
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 638 Tm (Dr. Tariq Al-Mansoor bridges embedded hardware systems and spatiotemporal machine) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 625 Tm (learning. His research focuses on resilient LoRaWAN and satellite-backhauled) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 612 Tm (environmental sensor nodes deployed in remote watersheds and dense urban canyons, paired) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 599 Tm (with graph-based imputation models that reconcile sparse ground telemetry with) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 586 Tm (continuous Earth observation grids.) Tj ET
+BT /F2 9.3 Tf 0.10 0.12 0.16 rg 1 0 0 1 54 569 Tm (Research Interests: Environmental IoT & Edge Telemetry  |  Spatiotemporal Graph Neural Networks  |  Sensor Network Resilience  |  Open Environmental Data Standards) Tj ET
+BT /F2 10.5 Tf 0.12 0.23 0.54 rg 1 0 0 1 54 548 Tm (ACADEMIC QUALIFICATIONS) Tj ET
+0.75 w 0.82 0.84 0.88 RG 54 537 m 558 537 l S
+BT /F2 9.3 Tf 0.10 0.12 0.16 rg 1 0 0 1 54 526 Tm (Ph.D. in Computer Science \(Embedded & Distributed Systems\) \(2021\)   Imperial College London) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 513 Tm (Specialization: Energy-Autonomous Environmental Wireless Sensor Networks | Best Doctoral Thesis Award, Department of Computing) Tj ET
+BT /F2 9.3 Tf 0.10 0.12 0.16 rg 1 0 0 1 54 500 Tm (M.Sc. in Machine Learning & Data Science \(2017\)   University of Edinburgh) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 487 Tm (Specialization: Time-Series & Graph Representation Learning | Graduated with Distinction) Tj ET
+BT /F2 9.3 Tf 0.10 0.12 0.16 rg 1 0 0 1 54 474 Tm (B.Eng. in Electrical & Computer Engineering \(2015\)   American University of Beirut) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 461 Tm (Specialization: Embedded Signal Processing | Summa Cum Laude) Tj ET
+BT /F2 10.5 Tf 0.12 0.23 0.54 rg 1 0 0 1 54 440 Tm (SELECTED RESEARCH PROJECTS) Tj ET
+0.75 w 0.82 0.84 0.88 RG 54 429 m 558 429 l S
+BT /F2 9.3 Tf 0.10 0.12 0.16 rg 1 0 0 1 54 418 Tm (Alpsys Autonomous Watershed Telemetry Mesh [Ongoing, 2023   Present]) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 405 Tm (Lead Systems Architect: Open-hardware solar-powered stream gauge and meteorological) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 392 Tm (nodes running edge anomaly detection over long-range LoRaWAN links.) Tj ET
+BT /F2 9.3 Tf 0.10 0.12 0.16 rg 1 0 0 1 54 379 Tm (Spatiotemporal Graph Imputation for Urban Air Quality Networks [Completed, 2021   2023]) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 366 Tm (Principal Developer: Attention-based graph neural architecture reconstructing missing) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 353 Tm (micro-sensor readings during power or transmission outages.) Tj ET
+BT /F2 10.5 Tf 0.12 0.23 0.54 rg 1 0 0 1 54 332 Tm (SELECTED PUBLICATIONS) Tj ET
+0.75 w 0.82 0.84 0.88 RG 54 321 m 558 321 l S
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 310 Tm ([2025] Al-Mansoor, T., & Chakraborty, M. "Adaptive duty-cycling in solar-harvesting) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 297 Tm (hydrological sensor meshes under alpine winter constraints." ACM Transactions on Sensor) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 284 Tm (Networks, Vol. 21\(1\), Article 14. DOI: 10.1145/3688214) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 271 Tm ([2024] Al-Mansoor, T., Sen, A., & Chakraborty, M. "Physics-informed graph neural) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 258 Tm (networks for sparse watershed discharge interpolation." Proceedings of the ACM SIGKDD) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 245 Tm (Conference on Knowledge Discovery and Data Mining. DOI: 10.1145/3637528.3671902) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 232 Tm ([2023] Al-Mansoor, T. "Open Standards for Environmental Telemetry: SensorThings API in) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 219 Tm (Field Deployments." Journal of Open Source Software, Vol. 8\(89\), 5412. DOI:) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 206 Tm (10.21105/joss.05412) Tj ET
+BT /F2 10.5 Tf 0.12 0.23 0.54 rg 1 0 0 1 54 185 Tm (ACADEMIC EXPERIENCE) Tj ET
+0.75 w 0.82 0.84 0.88 RG 54 174 m 558 174 l S
+BT /F2 9.3 Tf 0.10 0.12 0.16 rg 1 0 0 1 54 163 Tm (Teaching: Co-Instructor   Embedded Sensing & Environmental Data Pipelines \(CS 465\) \(2023   Present\)   Horizon Institute of Technology) Tj ET
+BT /F2 9.3 Tf 0.10 0.12 0.16 rg 1 0 0 1 54 150 Tm (Research: Senior Research Fellow \(2022   Present\)   Meridian Research Collective, Horizon Institute of Technology) Tj ET
+BT /F2 9.3 Tf 0.10 0.12 0.16 rg 1 0 0 1 54 137 Tm (Research: Research Associate \(2021   2022\)   Data Science Institute, Imperial College London) Tj ET
+BT /F2 9.3 Tf 0.10 0.12 0.16 rg 1 0 0 1 54 124 Tm (Workshops & Training: Co-Chair   Workshop on Low-Power Environmental Sensing \(2024\)   ACM SenSys) Tj ET
+BT /F2 9.3 Tf 0.10 0.12 0.16 rg 1 0 0 1 54 111 Tm (Workshops & Training: Linux Foundation Certified Embedded Systems Engineer \(2022\)   The Linux Foundation) Tj ET
+BT /F2 10.5 Tf 0.12 0.23 0.54 rg 1 0 0 1 54 90 Tm (TECHNICAL & RESEARCH SKILLS) Tj ET
+0.75 w 0.82 0.84 0.88 RG 54 79 m 558 79 l S
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 3 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 670 >>
+stream
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 742 Tm (Technical: Embedded Firmware & PCB Design, LoRaWAN / NB-IoT Telemetry, Spatiotemporal) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 729 Tm (Graph Neural Networks, Distributed Time-Series Databases) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 716 Tm (Tools & Software: TimescaleDB / InfluxDB, KiCad, Apache Kafka, Docker / Kubernetes) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 703 Tm (Programming: Python \(PyTorch Geometric\), C / C++ \(Zephyr RTOS\), Rust, TypeScript) Tj ET
+BT /F1 9.5 Tf 0.12 0.14 0.18 rg 1 0 0 1 54 690 Tm (GIS / Remote Sensing: PostGIS, OGC SensorThings API, GeoParquet, QGIS) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 3 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Type /Catalog /Pages 3 0 R >>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000000154 00000 n 
+0000000217 00000 n 
+0000006239 00000 n 
+0000006375 00000 n 
+0000007096 00000 n 
+0000007232 00000 n 
+trailer
+<< /Size 9 /Root 8 0 R >>
+startxref
+7281
+%%EOF

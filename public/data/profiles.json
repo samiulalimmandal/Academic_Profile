@@ -1,0 +1,791 @@
+{
+  "group": {
+    "name": "Meridian Research Collective",
+    "shortName": "Meridian Research",
+    "kicker": "Earth Observation, Computational Ecology & Environmental Systems",
+    "tagline": "Interdisciplinary scholarship bridging geospatial sensing, ecological modeling, and resilient environmental infrastructure.",
+    "description": "Meridian Research Collective is an independent four-member academic research group at Horizon Institute of Technology. We investigate urban microclimates, forest canopy dynamics, alpine hydrology, and low-power environmental telemetry through open science and reproducible computational workflows.",
+    "institution": "Horizon Institute of Technology",
+    "department": "School of Earth, Computing & Environmental Sciences",
+    "location": "140 Observatory Way, North Academic Quad, Cambridge, MA 02138",
+    "email": "contact@meridian-research.org",
+    "heroImage": "./assets/images/hero-lab.jpg",
+    "establishedYear": "2022"
+  },
+  "members": [
+    {
+      "id": "aarav-sen",
+      "name": "Dr. Aarav Sen",
+      "designation": "Principal Investigator & Associate Professor",
+      "department": "Department of Earth & Environmental Sciences",
+      "institution": "Horizon Institute of Technology",
+      "photo": "./assets/images/person1.jpg",
+      "cvUrl": "./assets/cv/person1-cv.pdf",
+      "shortBio": "Geoinformatics researcher specializing in multi-sensor thermal remote sensing, urban climate adaptation, and spatial hydrology.",
+      "fullBio": "Dr. Aarav Sen leads the Urban Climate & Spatial Geoinformatics track within the Meridian Research Collective. His work combines synthetic aperture radar (SAR), thermal infrared satellite imagery, and physics-informed spatial machine learning to quantify heat vulnerability and stormwater retention across rapidly urbanizing river basins. Prior to joining Horizon Institute of Technology, he held a postdoctoral fellowship in Environmental Remote Sensing in Zurich and has authored over twenty peer-reviewed monographs and journal articles.",
+      "researchInterests": [
+        "Urban Heat Island Modeling",
+        "SAR & Thermal Remote Sensing",
+        "Spatial Hydrology",
+        "GeoAI & Earth Observation"
+      ],
+      "qualifications": [
+        {
+          "degree": "Ph.D. in Geoinformatics & Earth Observation",
+          "institution": "ETH Zurich",
+          "year": "2018",
+          "specialization": "Urban Microclimate & Thermal Infrared Remote Sensing",
+          "achievements": "ETH Medal Nominee for Outstanding Doctoral Dissertation"
+        },
+        {
+          "degree": "M.Tech. in Remote Sensing & GIS",
+          "institution": "Indian Institute of Technology Bombay",
+          "year": "2014",
+          "specialization": "Spatial Decision Support Systems",
+          "achievements": "Institute Silver Medal (First Rank in Cohort)"
+        },
+        {
+          "degree": "B.E. in Civil & Environmental Engineering",
+          "institution": "Jadavpur University",
+          "year": "2012",
+          "specialization": "Water Resources & Surveying",
+          "achievements": "First Class with Distinction"
+        }
+      ],
+      "researchProjects": [
+        {
+          "id": "proj-sen-1",
+          "title": "Estuarine Urban Heat & Flood Vulnerability Atlas",
+          "status": "Ongoing",
+          "timeframe": "2024 – Present",
+          "role": "Principal Investigator",
+          "image": "./assets/images/research-urban-climate.jpg",
+          "description": "High-resolution 10m downscaling of Landsat-9 and ECOSTRESS land surface temperature fused with building morphology vectors to guide municipal cooling corridors.",
+          "link": "https://github.com/meridian-research/estuarine-heat-atlas"
+        },
+        {
+          "id": "proj-sen-2",
+          "title": "Multi-Temporal SAR Wetland Inundation Mapping",
+          "status": "Completed",
+          "timeframe": "2021 – 2024",
+          "role": "Lead Researcher",
+          "image": "./assets/images/research-iot-sensing.jpg",
+          "description": "Automated Sentinel-1 C-band backscatter time-series pipeline for detecting seasonal floodplain saturation beneath dense riparian vegetation.",
+          "link": "https://doi.org/10.1016/j.rse.2024.113982"
+        }
+      ],
+      "publications": [
+        {
+          "id": "pub-sen-1",
+          "title": "Sub-parcel thermal downscaling in coastal river basins using Sentinel-2 spectral indices and street-canyon geometry",
+          "authors": "Sen, A., Chakraborty, M., & Al-Mansoor, T.",
+          "venue": "Remote Sensing of Environment, Vol. 308, pp. 114–129",
+          "year": 2025,
+          "type": "Journal Article",
+          "doi": "10.1016/j.rse.2025.114129",
+          "url": "https://doi.org/10.1016/j.rse.2025.114129"
+        },
+        {
+          "id": "pub-sen-2",
+          "title": "Physics-constrained spatial random forests for urban nocturnal cooling estimation",
+          "authors": "Sen, A., & Vance, E.",
+          "venue": "ISPRS Journal of Photogrammetry and Remote Sensing, Vol. 212, pp. 42–58",
+          "year": 2024,
+          "type": "Journal Article",
+          "doi": "10.1016/j.isprsjprs.2024.04.011",
+          "url": "https://doi.org/10.1016/j.isprsjprs.2024.04.011"
+        },
+        {
+          "id": "pub-sen-3",
+          "title": "Cloud-native SAR interferometry workflows for municipal subsidence monitoring",
+          "authors": "Sen, A.",
+          "venue": "Proceedings of the IEEE International Geoscience and Remote Sensing Symposium (IGARSS)",
+          "year": 2023,
+          "type": "Conference Paper",
+          "doi": "10.1109/IGARSS52108.2023.1028194",
+          "url": "https://doi.org/10.1109/IGARSS52108.2023.1028194"
+        },
+        {
+          "id": "pub-sen-4",
+          "title": "Thermal Remote Sensing of Urban Microclimates: Methods and Open Benchmarks",
+          "authors": "Sen, A.",
+          "venue": "Springer Handbook of Urban Environmental Informatics (Ch. 7)",
+          "year": 2022,
+          "type": "Book Chapter",
+          "doi": "10.1007/978-3-031-10421-3_7",
+          "url": "https://doi.org/10.1007/978-3-031-10421-3_7"
+        }
+      ],
+      "experience": {
+        "teaching": [
+          {
+            "role": "Course Director — Spatial Hydrology & Satellite Geoinformatics (EES 412)",
+            "organization": "Horizon Institute of Technology",
+            "period": "2022 – Present",
+            "description": "Graduate seminar and laboratory practicum covering SAR processing, radiative transfer, and urban climate mapping."
+          },
+          {
+            "role": "Guest Lecturer — Advanced Earth Observation",
+            "organization": "ETH Zurich",
+            "period": "2019 – 2021",
+            "description": "Delivered module series on thermal infrared calibration and open-source geospatial stacks."
+          }
+        ],
+        "research": [
+          {
+            "role": "Associate Professor & Principal Investigator",
+            "organization": "Meridian Research Collective, Horizon Institute of Technology",
+            "period": "2022 – Present",
+            "description": "Directing funded research on urban heat resilience, hydrological remote sensing, and open geospatial benchmarks."
+          },
+          {
+            "role": "Postdoctoral Research Fellow",
+            "organization": "Institute of Environmental Engineering, ETH Zurich",
+            "period": "2018 – 2021",
+            "description": "Developed automated continental-scale flood extent retrieval models from Sentinel-1 imagery."
+          }
+        ],
+        "internships": [
+          {
+            "role": "Visiting Doctoral Researcher",
+            "organization": "European Space Agency (ESA-ESRIN), Frascati",
+            "period": "Summer 2017",
+            "description": "Calibrated multi-sensor land surface temperature products for Mediterranean metropolitan basins."
+          }
+        ],
+        "workshops": [
+          {
+            "role": "Lead Instructor — Open GeoAI & Cloud-Native GeoTIFFs",
+            "organization": "FOSS4G Academic Track",
+            "period": "2024",
+            "description": "Full-day hands-on workshop for 90 graduate researchers using STAC APIs and PyTorch Geo."
+          }
+        ],
+        "certifications": [
+          {
+            "role": "Google Earth Engine Certified Educator & Trainer",
+            "organization": "Earth Engine Outreach Program",
+            "period": "2023",
+            "description": "Recognized curriculum developer for cloud-scale environmental remote sensing."
+          }
+        ]
+      },
+      "skills": {
+        "technical": [
+          "Thermal Radiative Transfer",
+          "SAR Interferometry (InSAR)",
+          "Spatial Econometrics",
+          "Reproducible Research Pipelines"
+        ],
+        "researchTools": [
+          "Google Earth Engine",
+          "SNAP ESA Toolbox",
+          "ENVI",
+          "STAC / Cloud-Optimized GeoTIFF"
+        ],
+        "programming": [
+          "Python (Rasterio, Xarray, PyTorch)",
+          "R (terra, sf)",
+          "SQL / PostGIS",
+          "JavaScript"
+        ],
+        "gisRemoteSensing": [
+          "QGIS",
+          "ArcGIS Pro",
+          "GRASS GIS",
+          "GDAL / OGR"
+        ],
+        "professional": [
+          "Grant Acquisition & Lab Leadership",
+          "Doctoral Supervision",
+          "Peer Review (RSE, ISPRS)",
+          "Municipal Policy Advisory"
+        ]
+      },
+      "socials": {
+        "googleScholar": "https://scholar.google.com/",
+        "researchGate": "https://www.researchgate.net/",
+        "orcid": "https://orcid.org/0000-0002-1825-0097",
+        "linkedin": "https://www.linkedin.com/",
+        "github": "https://github.com/",
+        "facebook": "https://www.facebook.com/",
+        "instagram": "https://www.instagram.com/",
+        "twitter": "https://x.com/",
+        "website": "https://meridian-research.org/aarav-sen"
+      },
+      "contact": {
+        "email": "aarav.sen@horizon-tech.edu",
+        "phone": "+1 (617) 555-0142",
+        "address": "Room 314, Earth Sciences Pavilion, 140 Observatory Way, Cambridge, MA 02138",
+        "officeHours": "Tuesdays & Thursdays, 14:00 – 16:00 EST"
+      }
+    },
+    {
+      "id": "elena-vance",
+      "name": "Dr. Elena Vance",
+      "designation": "Assistant Professor of Computational Ecology",
+      "department": "Department of Biological & Environmental Sciences",
+      "institution": "Horizon Institute of Technology",
+      "photo": "./assets/images/person2.jpg",
+      "cvUrl": "./assets/cv/person2-cv.pdf",
+      "shortBio": "Quantitative ecologist integrating airborne LiDAR canopy structure with bioacoustic monitoring and biodiversity informatics.",
+      "fullBio": "Dr. Elena Vance investigates how forest structural complexity regulates microclimate buffering and avian biodiversity across temperate mountain corridors. Her laboratory pairs terrestrial and airborne laser scanning (LiDAR) with autonomous passive acoustic arrays to build scalable, non-invasive biodiversity indicators for conservation agencies and long-term ecological research networks.",
+      "researchInterests": [
+        "Canopy LiDAR Ecology",
+        "Bioacoustic Machine Learning",
+        "Species Distribution Modeling",
+        "Conservation Informatics"
+      ],
+      "qualifications": [
+        {
+          "degree": "Ph.D. in Quantitative Ecology & Conservation Biology",
+          "institution": "University of British Columbia",
+          "year": "2020",
+          "specialization": "3D Forest Structure & Avian Habitat Modeling",
+          "achievements": "Governor General's Academic Gold Medal Finalist"
+        },
+        {
+          "degree": "M.Sc. in Environmental Informatics",
+          "institution": "University of Oxford",
+          "year": "2016",
+          "specialization": "Biodiversity Monitoring & Spatial Statistics",
+          "achievements": "Distinction in Thesis Research"
+        },
+        {
+          "degree": "B.Sc. (Hons) in Ecology & Evolutionary Biology",
+          "institution": "McGill University",
+          "year": "2014",
+          "specialization": "Forest Ecosystem Dynamics",
+          "achievements": "Dean's Honour List"
+        }
+      ],
+      "researchProjects": [
+        {
+          "id": "proj-vance-1",
+          "title": "Temperate Canopy Flux & Bioacoustic Observatory",
+          "status": "Ongoing",
+          "timeframe": "2023 – Present",
+          "role": "Co-Principal Investigator",
+          "image": "./assets/images/research-canopy-lidar.jpg",
+          "description": "Synchronizing 3D airborne LiDAR point clouds with 48 continuous acoustic recorders across elevation gradients to measure structural habitat resilience.",
+          "link": "https://github.com/meridian-research/canopy-bioacoustics"
+        },
+        {
+          "id": "proj-vance-2",
+          "title": "Open Corridor Connectivity Benchmark for Montane Species",
+          "status": "Completed",
+          "timeframe": "2020 – 2023",
+          "role": "Lead Investigator",
+          "image": "./assets/images/research-urban-climate.jpg",
+          "description": "Circuit-theory spatial resistance modeling identifying priority wildlife movement corridors across fragmented timberland.",
+          "link": "https://doi.org/10.1111/ele.14218"
+        }
+      ],
+      "publications": [
+        {
+          "id": "pub-vance-1",
+          "title": "Vertical canopy heterogeneity predicts dawn chorus species richness across temperate montane gradients",
+          "authors": "Vance, E., & Al-Mansoor, T.",
+          "venue": "Ecology Letters, Vol. 28(2), pp. 210–224",
+          "year": 2025,
+          "type": "Journal Article",
+          "doi": "10.1111/ele.14492",
+          "url": "https://doi.org/10.1111/ele.14492"
+        },
+        {
+          "id": "pub-vance-2",
+          "title": "Zero-shot transfer learning for nocturnal avian flight call detection in noisy forest soundscapes",
+          "authors": "Vance, E., & Sen, A.",
+          "venue": "Methods in Ecology and Evolution, Vol. 15(8), pp. 1390–1404",
+          "year": 2024,
+          "type": "Journal Article",
+          "doi": "10.1111/2041-210X.14355",
+          "url": "https://doi.org/10.1111/2041-210X.14355"
+        },
+        {
+          "id": "pub-vance-3",
+          "title": "Integrating airborne LiDAR metrics into Bayesian hierarchical occupancy models",
+          "authors": "Vance, E.",
+          "venue": "International Conference on Ecological Informatics (ICEI)",
+          "year": 2023,
+          "type": "Conference Paper",
+          "doi": "10.1109/ICEI.2023.884210",
+          "url": "https://doi.org/10.1109/ICEI.2023.884210"
+        }
+      ],
+      "experience": {
+        "teaching": [
+          {
+            "role": "Assistant Professor — Quantitative Field Ecology (BIO 340)",
+            "organization": "Horizon Institute of Technology",
+            "period": "2022 – Present",
+            "description": "Undergraduate and graduate instruction in hierarchical Bayesian modeling, spatial ecology, and R programming."
+          }
+        ],
+        "research": [
+          {
+            "role": "Assistant Professor & Ecological Lead",
+            "organization": "Meridian Research Collective, Horizon Institute of Technology",
+            "period": "2022 – Present",
+            "description": "Leading the Forest Canopy & Bioacoustics Observatory and mentoring four graduate researchers."
+          },
+          {
+            "role": "Postdoctoral Researcher",
+            "organization": "Smithsonian Conservation Biology Institute",
+            "period": "2020 – 2022",
+            "description": "Developed continental acoustic monitoring protocols for migratory songbirds."
+          }
+        ],
+        "internships": [
+          {
+            "role": "Remote Sensing Ecology Intern",
+            "organization": "United Nations Environment Programme (UNEP-WCMC), Cambridge UK",
+            "period": "Summer 2016",
+            "description": "Assessed protected area habitat intactness using global tree-cover loss datasets."
+          }
+        ],
+        "workshops": [
+          {
+            "role": "Organizer — Reproducible Bioacoustics in Python & R",
+            "organization": "Ecological Society of America Annual Meeting",
+            "period": "2024",
+            "description": "Interactive training session on spectrogram annotation, BirdNET calibration, and field hardware deployment."
+          }
+        ],
+        "certifications": [
+          {
+            "role": "FAA Part 107 Remote Pilot (UAV LiDAR Operations)",
+            "organization": "Federal Aviation Administration",
+            "period": "2023",
+            "description": "Certified for low-altitude forestry drone LiDAR and multispectral surveys."
+          }
+        ]
+      },
+      "skills": {
+        "technical": [
+          "Airborne & Terrestrial LiDAR Processing",
+          "Bayesian Hierarchical Modeling",
+          "Passive Acoustic Monitoring",
+          "Landscape Connectivity Analysis"
+        ],
+        "researchTools": [
+          "LAStools / PDAL",
+          "CloudCompare",
+          "Raven Pro",
+          "Stan / JAGS"
+        ],
+        "programming": [
+          "R (lidR, unmarked, tidyverse)",
+          "Python (Librosa, SciPy)",
+          "SQL",
+          "Bash"
+        ],
+        "gisRemoteSensing": [
+          "QGIS",
+          "Google Earth Engine",
+          "Circuitscape",
+          "R raster / terra"
+        ],
+        "professional": [
+          "Field Campaign Management",
+          "Conservation Agency Collaboration",
+          "Scientific Writing & Editing",
+          "Open Data Curation"
+        ]
+      },
+      "socials": {
+        "googleScholar": "https://scholar.google.com/",
+        "researchGate": "https://www.researchgate.net/",
+        "orcid": "https://orcid.org/0000-0003-4119-8420",
+        "linkedin": "https://www.linkedin.com/",
+        "github": "https://github.com/",
+        "facebook": "https://www.facebook.com/",
+        "instagram": "https://www.instagram.com/",
+        "twitter": "https://x.com/",
+        "website": "https://meridian-research.org/elena-vance"
+      },
+      "contact": {
+        "email": "elena.vance@horizon-tech.edu",
+        "phone": "+1 (617) 555-0188",
+        "address": "Room 208, Biological Sciences Hall, 140 Observatory Way, Cambridge, MA 02138",
+        "officeHours": "Mondays & Wednesdays, 10:30 – 12:30 EST"
+      }
+    },
+    {
+      "id": "tariq-al-mansoor",
+      "name": "Dr. Tariq Al-Mansoor",
+      "designation": "Senior Research Fellow in Environmental IoT",
+      "department": "School of Computing & Data Science",
+      "institution": "Horizon Institute of Technology",
+      "photo": "./assets/images/person3.jpg",
+      "cvUrl": "./assets/cv/person3-cv.pdf",
+      "shortBio": "Systems computer scientist designing ultra-low-power sensor networks and spatiotemporal graph neural networks for field telemetry.",
+      "fullBio": "Dr. Tariq Al-Mansoor bridges embedded hardware systems and spatiotemporal machine learning. His research focuses on resilient LoRaWAN and satellite-backhauled environmental sensor nodes deployed in remote watersheds and dense urban canyons, paired with graph-based imputation models that reconcile sparse ground telemetry with continuous Earth observation grids.",
+      "researchInterests": [
+        "Environmental IoT & Edge Telemetry",
+        "Spatiotemporal Graph Neural Networks",
+        "Sensor Network Resilience",
+        "Open Environmental Data Standards"
+      ],
+      "qualifications": [
+        {
+          "degree": "Ph.D. in Computer Science (Embedded & Distributed Systems)",
+          "institution": "Imperial College London",
+          "year": "2021",
+          "specialization": "Energy-Autonomous Environmental Wireless Sensor Networks",
+          "achievements": "Best Doctoral Thesis Award, Department of Computing"
+        },
+        {
+          "degree": "M.Sc. in Machine Learning & Data Science",
+          "institution": "University of Edinburgh",
+          "year": "2017",
+          "specialization": "Time-Series & Graph Representation Learning",
+          "achievements": "Graduated with Distinction"
+        },
+        {
+          "degree": "B.Eng. in Electrical & Computer Engineering",
+          "institution": "American University of Beirut",
+          "year": "2015",
+          "specialization": "Embedded Signal Processing",
+          "achievements": "Summa Cum Laude"
+        }
+      ],
+      "researchProjects": [
+        {
+          "id": "proj-tariq-1",
+          "title": "Alpsys Autonomous Watershed Telemetry Mesh",
+          "status": "Ongoing",
+          "timeframe": "2023 – Present",
+          "role": "Lead Systems Architect",
+          "image": "./assets/images/research-iot-sensing.jpg",
+          "description": "Open-hardware solar-powered stream gauge and meteorological nodes running edge anomaly detection over long-range LoRaWAN links.",
+          "link": "https://github.com/meridian-research/alpsys-telemetry"
+        },
+        {
+          "id": "proj-tariq-2",
+          "title": "Spatiotemporal Graph Imputation for Urban Air Quality Networks",
+          "status": "Completed",
+          "timeframe": "2021 – 2023",
+          "role": "Principal Developer",
+          "image": "./assets/images/research-urban-climate.jpg",
+          "description": "Attention-based graph neural architecture reconstructing missing micro-sensor readings during power or transmission outages.",
+          "link": "https://doi.org/10.1145/3583780.3614890"
+        }
+      ],
+      "publications": [
+        {
+          "id": "pub-tariq-1",
+          "title": "Adaptive duty-cycling in solar-harvesting hydrological sensor meshes under alpine winter constraints",
+          "authors": "Al-Mansoor, T., & Chakraborty, M.",
+          "venue": "ACM Transactions on Sensor Networks, Vol. 21(1), Article 14",
+          "year": 2025,
+          "type": "Journal Article",
+          "doi": "10.1145/3688214",
+          "url": "https://doi.org/10.1145/3688214"
+        },
+        {
+          "id": "pub-tariq-2",
+          "title": "Physics-informed graph neural networks for sparse watershed discharge interpolation",
+          "authors": "Al-Mansoor, T., Sen, A., & Chakraborty, M.",
+          "venue": "Proceedings of the ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+          "year": 2024,
+          "type": "Conference Paper",
+          "doi": "10.1145/3637528.3671902",
+          "url": "https://doi.org/10.1145/3637528.3671902"
+        },
+        {
+          "id": "pub-tariq-3",
+          "title": "Open Standards for Environmental Telemetry: SensorThings API in Field Deployments",
+          "authors": "Al-Mansoor, T.",
+          "venue": "Journal of Open Source Software, Vol. 8(89), 5412",
+          "year": 2023,
+          "type": "Research Paper",
+          "doi": "10.21105/joss.05412",
+          "url": "https://doi.org/10.21105/joss.05412"
+        }
+      ],
+      "experience": {
+        "teaching": [
+          {
+            "role": "Co-Instructor — Embedded Sensing & Environmental Data Pipelines (CS 465)",
+            "organization": "Horizon Institute of Technology",
+            "period": "2023 – Present",
+            "description": "Project-based studio teaching PCB prototyping, MQTT/LoRa telemetry, and time-series ML."
+          }
+        ],
+        "research": [
+          {
+            "role": "Senior Research Fellow",
+            "organization": "Meridian Research Collective, Horizon Institute of Technology",
+            "period": "2022 – Present",
+            "description": "Architecting open-hardware telemetry nodes and streaming geospatial data infrastructure."
+          },
+          {
+            "role": "Research Associate",
+            "organization": "Data Science Institute, Imperial College London",
+            "period": "2021 – 2022",
+            "description": "Built distributed urban microclimate sensor testbeds across Greater London."
+          }
+        ],
+        "internships": [
+          {
+            "role": "Research Intern — Edge AI Systems",
+            "organization": "Arm Research, Cambridge UK",
+            "period": "Summer 2019",
+            "description": "Quantized anomaly detection models for Cortex-M4 environmental microcontrollers."
+          }
+        ],
+        "workshops": [
+          {
+            "role": "Co-Chair — Workshop on Low-Power Environmental Sensing",
+            "organization": "ACM SenSys",
+            "period": "2024",
+            "description": "Curated peer-reviewed hardware demonstrations and benchmark dataset releases."
+          }
+        ],
+        "certifications": [
+          {
+            "role": "Linux Foundation Certified Embedded Systems Engineer",
+            "organization": "The Linux Foundation",
+            "period": "2022",
+            "description": "Verified specialization in Zephyr RTOS and edge telemetry security."
+          }
+        ]
+      },
+      "skills": {
+        "technical": [
+          "Embedded Firmware & PCB Design",
+          "LoRaWAN / NB-IoT Telemetry",
+          "Spatiotemporal Graph Neural Networks",
+          "Distributed Time-Series Databases"
+        ],
+        "researchTools": [
+          "TimescaleDB / InfluxDB",
+          "KiCad",
+          "Apache Kafka",
+          "Docker / Kubernetes"
+        ],
+        "programming": [
+          "Python (PyTorch Geometric)",
+          "C / C++ (Zephyr RTOS)",
+          "Rust",
+          "TypeScript"
+        ],
+        "gisRemoteSensing": [
+          "PostGIS",
+          "OGC SensorThings API",
+          "GeoParquet",
+          "QGIS"
+        ],
+        "professional": [
+          "Open-Source Maintainer",
+          "Hardware Field Deployment",
+          "Cross-Disciplinary Mentorship",
+          "Technical Architecture"
+        ]
+      },
+      "socials": {
+        "googleScholar": "https://scholar.google.com/",
+        "researchGate": "https://www.researchgate.net/",
+        "orcid": "https://orcid.org/0000-0001-9042-7731",
+        "linkedin": "https://www.linkedin.com/",
+        "github": "https://github.com/",
+        "facebook": "https://www.facebook.com/",
+        "instagram": "https://www.instagram.com/",
+        "twitter": "https://x.com/",
+        "website": "https://meridian-research.org/tariq-al-mansoor"
+      },
+      "contact": {
+        "email": "t.almansoor@horizon-tech.edu",
+        "phone": "+1 (617) 555-0164",
+        "address": "Room 412, Turing Computing Wing, 140 Observatory Way, Cambridge, MA 02138",
+        "officeHours": "Wednesdays & Fridays, 15:00 – 17:00 EST"
+      }
+    },
+    {
+      "id": "maya-chakraborty",
+      "name": "Maya Chakraborty",
+      "designation": "Doctoral Researcher (Ph.D. Candidate)",
+      "department": "Department of Earth & Environmental Sciences",
+      "institution": "Horizon Institute of Technology",
+      "photo": "./assets/images/person4.jpg",
+      "cvUrl": "./assets/cv/person4-cv.pdf",
+      "shortBio": "Glaciology and hydrology doctoral researcher mapping high-mountain snowmelt runoff and debris-covered glacier dynamics using InSAR.",
+      "fullBio": "Maya Chakraborty is a fourth-year Ph.D. candidate investigating mountain cryosphere hydrology and glacial meltwater contributions to downstream basins. Combining Sentinel-1 interferometric synthetic aperture radar (InSAR), high-resolution optical stereogrammetry, and in-situ stream gauging, her doctoral research develops reproducible cloud-native geospatial pipelines to track seasonal glacier velocity and meltwater storage.",
+      "researchInterests": [
+        "Cryosphere & Glacial Hydrology",
+        "Interferometric SAR (InSAR)",
+        "Cloud-Native Geospatial Pipelines",
+        "Alpine Watershed Modeling"
+      ],
+      "qualifications": [
+        {
+          "degree": "Ph.D. Candidate in Earth & Cryosphere Sciences",
+          "institution": "Horizon Institute of Technology",
+          "year": "2026 (Expected)",
+          "specialization": "Glacial Meltwater Dynamics & Multi-Sensor Radar",
+          "achievements": "Horizon Presidential Doctoral Fellowship Recipient"
+        },
+        {
+          "degree": "M.Sc. in Geomatics & Water Engineering",
+          "institution": "Delft University of Technology (TU Delft)",
+          "year": "2022",
+          "specialization": "Hydrological Remote Sensing",
+          "achievements": "Cum Laude Honours"
+        },
+        {
+          "degree": "B.Tech. in Geoinformatics Engineering",
+          "institution": "Anna University",
+          "year": "2020",
+          "specialization": "Satellite Image Processing & Surveying",
+          "achievements": "University Gold Medalist"
+        }
+      ],
+      "researchProjects": [
+        {
+          "id": "proj-maya-1",
+          "title": "High-Mountain Glacial Runoff & InSAR Velocity Observatory",
+          "status": "Ongoing",
+          "timeframe": "2022 – Present",
+          "role": "Lead Doctoral Researcher",
+          "image": "./assets/images/research-iot-sensing.jpg",
+          "description": "Coupling Sentinel-1 offset-tracking glacier surface velocities with alpine stream conductivity sensors to partition snowmelt vs. ice-melt runoff.",
+          "link": "https://github.com/meridian-research/cryo-insar-runoff"
+        },
+        {
+          "id": "proj-maya-2",
+          "title": "Open Snow-Cover Fraction Benchmark from Harmonized Landsat-Sentinel",
+          "status": "Completed",
+          "timeframe": "2022 – 2024",
+          "role": "Primary Author & Developer",
+          "image": "./assets/images/research-canopy-lidar.jpg",
+          "description": "Cloud-native Python package and curated validation dataset for sub-pixel snow cover mapping in complex shaded alpine terrain.",
+          "link": "https://doi.org/10.5194/tc-18-2410-2024"
+        }
+      ],
+      "publications": [
+        {
+          "id": "pub-maya-1",
+          "title": "Sub-seasonal velocity acceleration on debris-covered valley glaciers revealed by dense Sentinel-1 interferometry",
+          "authors": "Chakraborty, M., & Sen, A.",
+          "venue": "The Cryosphere, Vol. 18, pp. 2410–2428",
+          "year": 2024,
+          "type": "Journal Article",
+          "doi": "10.5194/tc-18-2410-2024",
+          "url": "https://doi.org/10.5194/tc-18-2410-2024"
+        },
+        {
+          "id": "pub-maya-2",
+          "title": "Topographic shadow correction in harmonized Landsat-Sentinel snow-cover retrievals",
+          "authors": "Chakraborty, M., & Al-Mansoor, T.",
+          "venue": "EGU General Assembly Abstracts, EGU24-11820",
+          "year": 2024,
+          "type": "Conference Paper",
+          "doi": "10.5194/egusphere-egu24-11820",
+          "url": "https://doi.org/10.5194/egusphere-egu24-11820"
+        },
+        {
+          "id": "pub-maya-3",
+          "title": "Reproducible Hydrological Workflows in Cloud-Native Earth Observation",
+          "authors": "Chakraborty, M.",
+          "venue": "Advances in Mountain Hydrology and Remote Sensing (Ch. 4)",
+          "year": 2023,
+          "type": "Book Chapter",
+          "doi": "10.1007/978-3-031-41209-7_4",
+          "url": "https://doi.org/10.1007/978-3-031-41209-7_4"
+        }
+      ],
+      "experience": {
+        "teaching": [
+          {
+            "role": "Graduate Teaching Fellow — Introduction to GIS & Spatial Analysis (EES 204)",
+            "organization": "Horizon Institute of Technology",
+            "period": "2022 – 2024",
+            "description": "Led weekly QGIS, Python spatial analysis, and remote sensing lab sessions for 65 undergraduate students."
+          }
+        ],
+        "research": [
+          {
+            "role": "Doctoral Researcher",
+            "organization": "Meridian Research Collective, Horizon Institute of Technology",
+            "period": "2022 – Present",
+            "description": "Conducting alpine fieldwork, SAR interferometry processing, and hydrological modeling."
+          }
+        ],
+        "internships": [
+          {
+            "role": "Geospatial Hydrology Intern",
+            "organization": "Deltares Research Institute, Delft",
+            "period": "2021 – 2022",
+            "description": "Integrated satellite snow-water equivalent estimates into distributed catchment flood forecasting models."
+          }
+        ],
+        "workshops": [
+          {
+            "role": "Participant & Presenter — Cryosphere Remote Sensing Summer School",
+            "organization": "Karthaus Glaciology Workshop, Italy",
+            "period": "2023",
+            "description": "Presented poster on debris-covered glacier surface energy balance and InSAR velocity inversion."
+          }
+        ],
+        "certifications": [
+          {
+            "role": "Wilderness First Responder & Alpine Field Safety Certification",
+            "organization": "SOLO Wilderness Medicine",
+            "period": "2023",
+            "description": "Certified for high-altitude glaciological and hydrological sensor fieldwork."
+          }
+        ]
+      },
+      "skills": {
+        "technical": [
+          "Glacial Mass Balance Modeling",
+          "Differential InSAR & Offset Tracking",
+          "Catchment Hydrological Simulation",
+          "Topographic Radiometric Correction"
+        ],
+        "researchTools": [
+          "ISCE2 / MintPy",
+          "Google Earth Engine",
+          "HEC-HMS",
+          "Dask / Pangeo Stack"
+        ],
+        "programming": [
+          "Python (Xarray, GeoPandas, PyGMT)",
+          "R",
+          "Shell Scripting",
+          "LaTeX"
+        ],
+        "gisRemoteSensing": [
+          "QGIS",
+          "SNAP ESA",
+          "GDAL",
+          "SAGA GIS"
+        ],
+        "professional": [
+          "High-Altitude Field Instrumentation",
+          "Open Science Documentation",
+          "Undergraduate Lab Instruction",
+          "Technical Cartography"
+        ]
+      },
+      "socials": {
+        "googleScholar": "https://scholar.google.com/",
+        "researchGate": "https://www.researchgate.net/",
+        "orcid": "https://orcid.org/0000-0002-7741-5928",
+        "linkedin": "https://www.linkedin.com/",
+        "github": "https://github.com/",
+        "facebook": "https://www.facebook.com/",
+        "instagram": "https://www.instagram.com/",
+        "twitter": "https://x.com/",
+        "website": "https://meridian-research.org/maya-chakraborty"
+      },
+      "contact": {
+        "email": "m.chakraborty@horizon-tech.edu",
+        "phone": "+1 (617) 555-0197",
+        "address": "Room 319, Earth Sciences Pavilion, 140 Observatory Way, Cambridge, MA 02138",
+        "officeHours": "Thursdays, 11:00 – 13:00 EST"
+      }
+    }
+  ]
+}

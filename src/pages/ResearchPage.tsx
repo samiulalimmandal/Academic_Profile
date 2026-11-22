@@ -34,15 +34,30 @@ export const ResearchPage: React.FC<ResearchPageProps> = ({ data, onNavigate }) 
   return (
     <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6 lg:px-8">
       <div className="border-b border-[#E5E0D8] pb-8 dark:border-[#232D3F]">
-        <p className="text-xs font-semibold tracking-widest uppercase text-[#1E3A8A] dark:text-[#60A5FA]">
-          {data.group.name}
-        </p>
-        <h1 className="mt-2 font-serif text-3xl font-semibold tracking-tight text-[#18181B] sm:text-4xl dark:text-[#F1F5F9]">
-          Research Projects &amp; Investigations
-        </h1>
-        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-[#57534E] sm:text-base dark:text-[#94A3B8]">
-          Active and completed research initiatives led by members of our collective across spatial geoinformatics, computational ecology, sensor telemetry, and cryosphere hydrology.
-        </p>
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-xs font-semibold tracking-widest uppercase text-[#1E3A8A] dark:text-[#60A5FA]">
+              {data.group.name}
+            </p>
+            <h1 className="mt-2 font-serif text-3xl font-semibold tracking-tight text-[#18181B] sm:text-4xl dark:text-[#F1F5F9]">
+              Research Projects &amp; Investigations
+            </h1>
+            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-[#57534E] sm:text-base dark:text-[#94A3B8]">
+              Active and completed research initiatives led by members of our collective across spatial geoinformatics, computational ecology, sensor telemetry, and cryosphere hydrology.
+            </p>
+          </div>
+          <a
+            href="#/drive"
+            onClick={(e) => {
+              e.preventDefault();
+              onNavigate('#/drive');
+            }}
+            className="inline-flex min-h-[40px] items-center gap-2 self-start rounded-lg border border-[#E5E0D8] bg-white px-4 py-2 text-xs font-medium text-[#18181B] transition-colors hover:bg-[#F2EFE9] whitespace-nowrap shrink-0 dark:border-[#232D3F] dark:bg-[#121824] dark:text-[#F1F5F9] dark:hover:bg-[#192130]"
+          >
+            <span>Open Research Drive</span>
+            <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+          </a>
+        </div>
 
         <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div

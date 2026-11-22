@@ -2,5 +2,7 @@
   "name": "Meridian Research Collective",
   "description": "Shared academic portfolio, researcher profiles, publications, research projects, and downloadable CVs for the Meridian Research Collective.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

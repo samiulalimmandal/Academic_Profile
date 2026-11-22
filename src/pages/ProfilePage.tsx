@@ -10,9 +10,15 @@ import {
   MapPin,
   Phone,
   Clock,
+  HardDriveUpload,
 } from 'lucide-react';
+import { ConfirmActionModal } from '../components/ConfirmActionModal';
+import { GoogleSignInButton } from '../components/GoogleSignInButton';
 import { SafeImage } from '../components/SafeImage';
 import { SocialIcons } from '../components/SocialIcons';
+import { useDriveAuth } from '../context/DriveAuthContext';
+import { buildGmailWebComposeUrl } from '../services/gmail';
+import { uploadBlobToDrive } from '../services/googleDrive';
 import type { AcademicMember, PublicationType } from '../types/academic';
 
 interface ProfilePageProps {
@@ -41,6 +47,13 @@ export const ProfilePage: React.FC<ProfilePageProps> = ({
   const [expTab, setExpTab] = useState<ExperienceTab>('all');
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const [copiedEmail, setCopiedEmail] = useState(false);
+
+  const { accessToken, needsAuth, isLoggingIn, signIn, invalidateToken } = useDriveAuth();
+  const [showDriveConfirm, setShowDriveConfirm] = useState(false);
+  const [showDriveAuthPrompt, setShowDriveAuthPrompt] = useState(false);
+  const [savingToDrive, setSavingToDrive] = useState(false);
+  const [driveSaveNotice, setDriveSaveNotice] = useState<string | null>(null);
+  const [driveSaveError, setDriveSaveError] = useState<string | null>(null);
 
   const filteredProjects = useMemo(() => {
     if (projectFilter === 'All') return member.researchProjects;
@@ -99,6 +112,55 @@ export const ProfilePage: React.FC<ProfilePageProps> = ({
   };
 
   const cvFilename = `${member.id}-cv.pdf`;
+  const gmailComposeUrl = buildGmailWebComposeUrl({
+    to: member.contact.email,
+    subject: `Academic Inquiry — ${member.name}`,
+  });
+
+  const handleSaveCvToDriveClick = () => {
+    setDriveSaveNotice(null);
+    setDriveSaveError(null);
+    if (needsAuth || !accessToken) {
+      setShowDriveAuthPrompt(true);
+    } else {
+      setShowDriveConfirm(true);
+    }
+  };
+
+  const handleConfirmSaveCvToDrive = async () => {
+    if (!accessToken) return;
+    setSavingToDrive(true);
+    setDriveSaveError(null);
+    try {
+      const res = await fetch(member.cvUrl);
+      if (!res.ok) {
+        throw new Error(`Unable to read CV PDF (${res.status})`);
+      }
+      const pdfBlob = await res.blob();
+      await uploadBlobToDrive({
+        accessToken,
+        blob: pdfBlob,
+        name: cvFilename,
+        mimeType: 'application/pdf',
+      });
+      setDriveSaveNotice(`Saved "${cvFilename}" to your Google Drive.`);
+      setShowDriveConfirm(false);
+    } catch (err: unknown) {
+      const status = (err as Error & { status?: number })?.status;
+      if (status === 401) {
+        invalidateToken();
+        setShowDriveConfirm(false);
+        setShowDriveAuthPrompt(true);
+      } else {
+        setDriveSaveError(
+          err instanceof Error ? err.message : 'Failed to save CV to Google Drive.'
+        );
+        setShowDriveConfirm(false);
+      }
+    } finally {
+      setSavingToDrive(false);
+    }
+  };
 
   return (
     <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8">
@@ -211,13 +273,52 @@ export const ProfilePage: React.FC<ProfilePageProps> = ({
               </a>
 
               <a
-                href={`mailto:${member.contact.email}`}
+                href={gmailComposeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex min-h-[42px] items-center gap-2 rounded-lg border border-[#E5E0D8] bg-white px-4 py-2 text-xs font-medium text-[#18181B] transition-colors hover:bg-[#F2EFE9] whitespace-nowrap shrink-0 dark:border-[#232D3F] dark:bg-[#121824] dark:text-[#F1F5F9] dark:hover:bg-[#192130]"
               >
                 <Mail className="h-4 w-4" aria-hidden="true" />
-                <span>Email Researcher</span>
+                <span>Send via Gmail</span>
               </a>
+
+              <button
+                type="button"
+                onClick={handleSaveCvToDriveClick}
+                className="inline-flex min-h-[42px] items-center gap-2 rounded-lg border border-[#E5E0D8] bg-white px-4 py-2 text-xs font-medium text-[#18181B] transition-colors hover:bg-[#F2EFE9] whitespace-nowrap shrink-0 dark:border-[#232D3F] dark:bg-[#121824] dark:text-[#F1F5F9] dark:hover:bg-[#192130]"
+              >
+                <HardDriveUpload className="h-4 w-4" aria-hidden="true" />
+                <span>Save CV to Drive</span>
+              </button>
             </div>
+
+            {driveSaveNotice && (
+              <div
+                role="status"
+                className="mt-3 flex flex-wrap items-center justify-between gap-2 rounded-lg border border-emerald-200 bg-emerald-50 px-3.5 py-2 text-xs text-emerald-900 dark:border-emerald-900/60 dark:bg-emerald-950/40 dark:text-emerald-300"
+              >
+                <span>{driveSaveNotice}</span>
+                <a
+                  href="#/drive"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigate('#/drive');
+                  }}
+                  className="font-medium underline"
+                >
+                  Open Research Drive
+                </a>
+              </div>
+            )}
+
+            {driveSaveError && (
+              <p
+                role="alert"
+                className="mt-3 rounded-lg border border-red-200 bg-red-50 px-3.5 py-2 text-xs text-red-800 dark:border-red-900/60 dark:bg-red-950/40 dark:text-red-300"
+              >
+                {driveSaveError}
+              </p>
+            )}
           </div>
         </div>
       </section>
@@ -596,7 +697,9 @@ export const ProfilePage: React.FC<ProfilePageProps> = ({
                 <p className="flex items-center gap-2.5">
                   <Mail className="h-4 w-4 shrink-0 text-[#1E3A8A] dark:text-[#60A5FA]" aria-hidden="true" />
                   <a
-                    href={`mailto:${member.contact.email}`}
+                    href={gmailComposeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="font-mono hover:underline"
                   >
                     {member.contact.email}
@@ -625,13 +728,13 @@ export const ProfilePage: React.FC<ProfilePageProps> = ({
 
             <div className="flex flex-wrap items-center gap-3">
               <a
-                href={`mailto:${member.contact.email}?subject=${encodeURIComponent(
-                  `Academic Inquiry — ${member.name}`
-                )}`}
+                href={gmailComposeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex min-h-[44px] items-center gap-2 rounded-lg bg-[#1E3A8A] px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#172554] whitespace-nowrap shrink-0 dark:bg-[#3B82F6] dark:hover:bg-[#2563EB]"
               >
                 <Mail className="h-4 w-4" aria-hidden="true" />
-                <span>Send Email</span>
+                <span>Send via Gmail</span>
               </a>
 
               <button
@@ -663,6 +766,60 @@ export const ProfilePage: React.FC<ProfilePageProps> = ({
           </div>
         </div>
       </section>
+
+      {showDriveAuthPrompt && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-xs"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="drive-auth-prompt-title"
+          onClick={() => setShowDriveAuthPrompt(false)}
+        >
+          <div
+            className="w-full max-w-md rounded-xl border border-[#E5E0D8] bg-white p-6 shadow-xl dark:border-[#232D3F] dark:bg-[#121824]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2
+              id="drive-auth-prompt-title"
+              className="font-serif text-xl font-semibold text-[#18181B] dark:text-[#F1F5F9]"
+            >
+              Sign in to Google Drive
+            </h2>
+            <p className="mt-2 text-sm leading-relaxed text-[#44403C] dark:text-[#CBD5E1]">
+              Sign in with Google to save {member.name}&apos;s CV ({cvFilename}) directly into your Google Drive.
+            </p>
+            <div className="mt-6 flex flex-wrap items-center justify-end gap-3">
+              <button
+                type="button"
+                onClick={() => setShowDriveAuthPrompt(false)}
+                className="inline-flex min-h-[40px] items-center rounded-lg border border-[#E5E0D8] px-4 py-2 text-xs font-medium text-[#18181B] hover:bg-[#F2EFE9] dark:border-[#232D3F] dark:text-[#F1F5F9] dark:hover:bg-[#192130]"
+              >
+                Cancel
+              </button>
+              <GoogleSignInButton
+                loading={isLoggingIn}
+                onClick={async () => {
+                  const tok = await signIn();
+                  if (tok) {
+                    setShowDriveAuthPrompt(false);
+                    setShowDriveConfirm(true);
+                  }
+                }}
+              />
+            </div>
+          </div>
+        </div>
+      )}
+
+      <ConfirmActionModal
+        open={showDriveConfirm}
+        title="Save CV PDF to Google Drive?"
+        description={`Upload "${cvFilename}" (${member.name}'s Curriculum Vitae) to your Google Drive?`}
+        confirmLabel="Save to Drive"
+        loading={savingToDrive}
+        onConfirm={handleConfirmSaveCvToDrive}
+        onCancel={() => !savingToDrive && setShowDriveConfirm(false)}
+      />
     </div>
   );
 };

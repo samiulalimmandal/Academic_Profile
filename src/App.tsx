@@ -7,10 +7,13 @@ import { useEffect, useState } from 'react';
 import { CvModal } from './components/CvModal';
 import { Footer } from './components/Footer';
 import { Navbar, type RoutePath } from './components/Navbar';
+import { DriveAuthProvider } from './context/DriveAuthContext';
 import { usePortfolioData } from './hooks/usePortfolioData';
 import { useTheme } from './hooks/useTheme';
 import { ContactPage } from './pages/ContactPage';
+import { DrivePage } from './pages/DrivePage';
 import { HomePage } from './pages/HomePage';
+import { MailPage } from './pages/MailPage';
 import { ProfilePage } from './pages/ProfilePage';
 import { PublicationsPage } from './pages/PublicationsPage';
 import { ResearchPage } from './pages/ResearchPage';
@@ -20,16 +23,28 @@ import type { AcademicMember } from './types/academic';
 interface ParsedRoute {
   page: RoutePath;
   profileId?: string;
+  mailTo?: string;
+  mailSubject?: string;
 }
 
 function parseHash(hash: string): ParsedRoute {
   const clean = hash.replace(/^#/, '') || '/';
-  const parts = clean.split('/').filter(Boolean);
+  const [pathPart, queryPart = ''] = clean.split('?');
+  const parts = pathPart.split('/').filter(Boolean);
+  const params = new URLSearchParams(queryPart);
 
   if (parts.length === 0) return { page: 'home' };
   if (parts[0] === 'team') return { page: 'team' };
   if (parts[0] === 'research') return { page: 'research' };
   if (parts[0] === 'publications') return { page: 'publications' };
+  if (parts[0] === 'drive') return { page: 'drive' };
+  if (parts[0] === 'mail') {
+    return {
+      page: 'mail',
+      mailTo: params.get('to') || undefined,
+      mailSubject: params.get('subject') || undefined,
+    };
+  }
   if (parts[0] === 'contact') return { page: 'contact' };
   if (parts[0] === 'profile' && parts[1]) {
     return { page: 'profile', profileId: decodeURIComponent(parts[1]) };
@@ -78,6 +93,8 @@ export default function App() {
       team: `Our Team | ${data.group.name}`,
       research: `Research Projects | ${data.group.name}`,
       publications: `Publications | ${data.group.name}`,
+      drive: `Research Drive | ${data.group.name}`,
+      mail: `Academic Mail | ${data.group.name}`,
       contact: `Contact | ${data.group.name}`,
       profile: `Academic Profile | ${data.group.name}`,
     };
@@ -125,53 +142,63 @@ export default function App() {
       : undefined;
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#FAF8F5] text-[#18181B] transition-colors duration-200 dark:bg-[#0B0F17] dark:text-[#F1F5F9]">
-      <Navbar
-        brandName={data.group.shortName}
-        activeRoute={route.page}
-        onNavigate={navigate}
-        theme={theme}
-        onToggleTheme={toggleTheme}
-      />
+    <DriveAuthProvider>
+      <div className="flex min-h-screen flex-col bg-[#FAF8F5] text-[#18181B] transition-colors duration-200 dark:bg-[#0B0F17] dark:text-[#F1F5F9]">
+        <Navbar
+          brandName={data.group.shortName}
+          activeRoute={route.page}
+          onNavigate={navigate}
+          theme={theme}
+          onToggleTheme={toggleTheme}
+        />
 
-      <main className="flex-1">
-        {route.page === 'home' && <HomePage data={data} onNavigate={navigate} />}
-        {route.page === 'team' && <TeamPage data={data} onNavigate={navigate} />}
-        {route.page === 'research' && <ResearchPage data={data} onNavigate={navigate} />}
-        {route.page === 'publications' && (
-          <PublicationsPage data={data} onNavigate={navigate} />
-        )}
-        {route.page === 'contact' && <ContactPage data={data} onNavigate={navigate} />}
-        {route.page === 'profile' &&
-          (activeMember ? (
-            <ProfilePage
-              member={activeMember}
-              allMembers={data.members}
-              onNavigate={navigate}
-              onOpenCv={(m) => setCvMember(m)}
+        <main className="flex-1">
+          {route.page === 'home' && <HomePage data={data} onNavigate={navigate} />}
+          {route.page === 'team' && <TeamPage data={data} onNavigate={navigate} />}
+          {route.page === 'research' && <ResearchPage data={data} onNavigate={navigate} />}
+          {route.page === 'publications' && (
+            <PublicationsPage data={data} onNavigate={navigate} />
+          )}
+          {route.page === 'drive' && <DrivePage data={data} />}
+          {route.page === 'mail' && (
+            <MailPage
+              data={data}
+              initialTo={route.mailTo}
+              initialSubject={route.mailSubject}
             />
-          ) : (
-            <div className="mx-auto max-w-3xl px-4 py-20 text-center">
-              <h1 className="font-serif text-3xl font-semibold text-[#18181B] dark:text-[#F1F5F9]">
-                Researcher Profile Not Found
-              </h1>
-              <p className="mt-3 text-sm text-[#57534E] dark:text-[#94A3B8]">
-                The requested academic profile identifier does not exist in profiles.json.
-              </p>
-              <button
-                type="button"
-                onClick={() => navigate('#/team')}
-                className="mt-6 inline-flex items-center rounded-lg bg-[#1E3A8A] px-5 py-2.5 text-sm font-medium text-white hover:bg-[#172554] dark:bg-[#3B82F6]"
-              >
-                Return to Team Directory
-              </button>
-            </div>
-          ))}
-      </main>
+          )}
+          {route.page === 'contact' && <ContactPage data={data} onNavigate={navigate} />}
+          {route.page === 'profile' &&
+            (activeMember ? (
+              <ProfilePage
+                member={activeMember}
+                allMembers={data.members}
+                onNavigate={navigate}
+                onOpenCv={(m) => setCvMember(m)}
+              />
+            ) : (
+              <div className="mx-auto max-w-3xl px-4 py-20 text-center">
+                <h1 className="font-serif text-3xl font-semibold text-[#18181B] dark:text-[#F1F5F9]">
+                  Researcher Profile Not Found
+                </h1>
+                <p className="mt-3 text-sm text-[#57534E] dark:text-[#94A3B8]">
+                  The requested academic profile identifier does not exist in profiles.json.
+                </p>
+                <button
+                  type="button"
+                  onClick={() => navigate('#/team')}
+                  className="mt-6 inline-flex items-center rounded-lg bg-[#1E3A8A] px-5 py-2.5 text-sm font-medium text-white hover:bg-[#172554] dark:bg-[#3B82F6]"
+                >
+                  Return to Team Directory
+                </button>
+              </div>
+            ))}
+        </main>
 
-      <Footer group={data.group} members={data.members} onNavigate={navigate} />
+        <Footer group={data.group} members={data.members} onNavigate={navigate} />
 
-      <CvModal member={cvMember} onClose={() => setCvMember(null)} />
-    </div>
+        <CvModal member={cvMember} onClose={() => setCvMember(null)} />
+      </div>
+    </DriveAuthProvider>
   );
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { buildGmailWebComposeUrl } from '../services/gmail';
 import type { AcademicMember, GroupInfo } from '../types/academic';
 
 interface FooterProps {
@@ -39,6 +40,8 @@ export const Footer: React.FC<FooterProps> = ({ group, members, onNavigate }) =>
                 { label: 'Our Team', href: '#/team' },
                 { label: 'Research Projects', href: '#/research' },
                 { label: 'Publications Archive', href: '#/publications' },
+                { label: 'Research Drive', href: '#/drive' },
+                { label: 'Academic Mail', href: '#/mail' },
                 { label: 'Contact Group', href: '#/contact' },
               ].map((link) => (
                 <li key={link.href}>
@@ -79,7 +82,12 @@ export const Footer: React.FC<FooterProps> = ({ group, members, onNavigate }) =>
             © {new Date().getFullYear()} {group.name}. All academic materials maintained for scholarly exchange.
           </p>
           <a
-            href={`mailto:${group.email}`}
+            href={buildGmailWebComposeUrl({
+              to: group.email,
+              subject: `Academic Inquiry — ${group.name}`,
+            })}
+            target="_blank"
+            rel="noopener noreferrer"
             className="font-mono hover:text-[#1E3A8A] dark:hover:text-[#60A5FA]"
           >
             {group.email}

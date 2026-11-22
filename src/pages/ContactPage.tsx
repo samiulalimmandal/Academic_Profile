@@ -1,5 +1,14 @@
-import React, { useState } from 'react';
-import { Check, Copy, Mail, MapPin, Phone, Send } from 'lucide-react';
+import React, { useRef, useState } from 'react';
+import {
+  Check,
+  Copy,
+  ExternalLink,
+  Mail,
+  MapPin,
+  Phone,
+  Send,
+} from 'lucide-react';
+import { buildGmailWebComposeUrl } from '../services/gmail';
 import type { PortfolioData } from '../types/academic';
 
 interface ContactPageProps {
@@ -9,6 +18,8 @@ interface ContactPageProps {
 
 export const ContactPage: React.FC<ContactPageProps> = ({ data, onNavigate }) => {
   const { group, members } = data;
+  const gmailAnchorRef = useRef<HTMLAnchorElement | null>(null);
+
   const [recipientId, setRecipientId] = useState<string>('group');
   const [senderName, setSenderName] = useState('');
   const [senderEmail, setSenderEmail] = useState('');
@@ -26,21 +37,22 @@ export const ContactPage: React.FC<ContactPageProps> = ({ data, onNavigate }) =>
       ? group.name
       : members.find((m) => m.id === recipientId)?.name || group.name;
 
-  const buildMailtoHref = () => {
-    const finalSubject = subject.trim() || `Academic Inquiry for ${selectedName}`;
-    const bodyLines = [
-      senderName ? `From: ${senderName}` : null,
-      senderEmail ? `Reply Email: ${senderEmail}` : null,
-      '',
+  const buildEmailBody = () => {
+    return [
+      senderName.trim() ? `From: ${senderName.trim()}` : null,
+      senderEmail.trim() ? `Reply Email: ${senderEmail.trim()}` : null,
+      senderName.trim() || senderEmail.trim() ? '' : null,
       message.trim(),
     ]
       .filter((l) => l !== null)
       .join('\n');
-
-    return `mailto:${selectedEmail}?subject=${encodeURIComponent(
-      finalSubject
-    )}&body=${encodeURIComponent(bodyLines)}`;
   };
+
+  const gmailWebHref = buildGmailWebComposeUrl({
+    to: selectedEmail,
+    subject: subject.trim() || `Academic Inquiry for ${selectedName}`,
+    body: buildEmailBody(),
+  });
 
   const handleCopyMessage = () => {
     const summary = `To: ${selectedName} <${selectedEmail}>\nSubject: ${
@@ -49,6 +61,11 @@ export const ContactPage: React.FC<ContactPageProps> = ({ data, onNavigate }) =>
     navigator.clipboard?.writeText(summary).catch(() => {});
     setCopiedInquiry(true);
     setTimeout(() => setCopiedInquiry(false), 2000);
+  };
+
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    gmailAnchorRef.current?.click();
   };
 
   return (
@@ -82,7 +99,15 @@ export const ContactPage: React.FC<ContactPageProps> = ({ data, onNavigate }) =>
               </p>
               <p className="flex items-center gap-2.5">
                 <Mail className="h-4 w-4 shrink-0 text-[#1E3A8A] dark:text-[#60A5FA]" aria-hidden="true" />
-                <a href={`mailto:${group.email}`} className="font-mono hover:underline">
+                <a
+                  href={buildGmailWebComposeUrl({
+                    to: group.email,
+                    subject: `Academic Inquiry — ${group.name}`,
+                  })}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono hover:underline"
+                >
                   {group.email}
                 </a>
               </p>
@@ -108,11 +133,17 @@ export const ContactPage: React.FC<ContactPageProps> = ({ data, onNavigate }) =>
                       {m.name}
                     </a>
                     <a
-                      href={`mailto:${m.contact.email}`}
-                      className="inline-flex items-center gap-1 rounded-md border border-[#E5E0D8] px-2.5 py-1 text-xs font-medium text-[#18181B] hover:bg-[#F2EFE9] whitespace-nowrap shrink-0 dark:border-[#232D3F] dark:text-[#F1F5F9] dark:hover:bg-[#192130]"
+                      href={buildGmailWebComposeUrl({
+                        to: m.contact.email,
+                        subject: `Academic Inquiry — ${m.name}`,
+                      })}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-md border border-[#E5E0D8] px-2.5 py-1 text-xs font-medium text-[#18181B] hover:bg-[#F2EFE9] whitespace-nowrap shrink-0 dark:border-[#232D3F] dark:text-[#F1F5F9] dark:hover:bg-[#192130]"
                     >
                       <Mail className="h-3 w-3" aria-hidden="true" />
-                      <span>Email</span>
+                      <span>Gmail</span>
+                      <ExternalLink className="h-2.5 w-2.5 opacity-70" aria-hidden="true" />
                     </a>
                   </div>
                   <p className="mt-0.5 text-xs text-[#57534E] dark:text-[#94A3B8]">
@@ -133,20 +164,17 @@ export const ContactPage: React.FC<ContactPageProps> = ({ data, onNavigate }) =>
           </div>
         </div>
 
-        {/* Right: Static-Compatible Email Dispatch Composer */}
+        {/* Right: Direct Gmail Inquiry Composer (No sign-in required) */}
         <div className="lg:col-span-7">
           <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              window.location.href = buildMailtoHref();
-            }}
+            onSubmit={handleFormSubmit}
             className="rounded-xl border border-[#E5E0D8] bg-white p-6 sm:p-8 dark:border-[#232D3F] dark:bg-[#121824]"
           >
             <h2 className="font-serif text-2xl font-semibold text-[#18181B] dark:text-[#F1F5F9]">
               Compose Academic Inquiry
             </h2>
             <p className="mt-1.5 text-sm text-[#57534E] dark:text-[#94A3B8]">
-              Select a recipient below to draft your email directly in your mail application or copy the formatted message.
+              Fill out your message below and open it directly in your Gmail app or Gmail web—no sign-in required on this site.
             </p>
 
             <div className="mt-6 space-y-4">
@@ -185,7 +213,6 @@ export const ContactPage: React.FC<ContactPageProps> = ({ data, onNavigate }) =>
                   <input
                     id="contact-name"
                     type="text"
-                    required
                     value={senderName}
                     onChange={(e) => setSenderName(e.target.value)}
                     placeholder="Dr. Jordan Patel"
@@ -202,7 +229,6 @@ export const ContactPage: React.FC<ContactPageProps> = ({ data, onNavigate }) =>
                   <input
                     id="contact-email"
                     type="email"
-                    required
                     value={senderEmail}
                     onChange={(e) => setSenderEmail(e.target.value)}
                     placeholder="jordan.patel@university.edu"
@@ -221,7 +247,6 @@ export const ContactPage: React.FC<ContactPageProps> = ({ data, onNavigate }) =>
                 <input
                   id="contact-subject"
                   type="text"
-                  required
                   value={subject}
                   onChange={(e) => setSubject(e.target.value)}
                   placeholder="Research Collaboration / Dataset Access Inquiry"
@@ -239,7 +264,6 @@ export const ContactPage: React.FC<ContactPageProps> = ({ data, onNavigate }) =>
                 <textarea
                   id="contact-message"
                   rows={5}
-                  required
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Write your academic message, collaboration proposal, or question..."
@@ -248,13 +272,17 @@ export const ContactPage: React.FC<ContactPageProps> = ({ data, onNavigate }) =>
               </div>
 
               <div className="flex flex-wrap items-center gap-3 pt-2">
-                <button
-                  type="submit"
+                <a
+                  ref={gmailAnchorRef}
+                  href={gmailWebHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex min-h-[44px] items-center gap-2 rounded-lg bg-[#1E3A8A] px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#172554] whitespace-nowrap shrink-0 dark:bg-[#3B82F6] dark:hover:bg-[#2563EB]"
                 >
                   <Send className="h-4 w-4" aria-hidden="true" />
-                  <span>Open in Email Client</span>
-                </button>
+                  <span>Open &amp; Send in Gmail</span>
+                  <ExternalLink className="h-3.5 w-3.5 opacity-80" aria-hidden="true" />
+                </a>
 
                 <button
                   type="button"
@@ -264,12 +292,12 @@ export const ContactPage: React.FC<ContactPageProps> = ({ data, onNavigate }) =>
                   {copiedInquiry ? (
                     <>
                       <Check className="h-4 w-4 text-emerald-600 dark:text-emerald-400" aria-hidden="true" />
-                      <span>Inquiry Copied</span>
+                      <span>Copied</span>
                     </>
                   ) : (
                     <>
                       <Copy className="h-4 w-4" aria-hidden="true" />
-                      <span>Copy Formatted Inquiry</span>
+                      <span>Copy Text</span>
                     </>
                   )}
                 </button>

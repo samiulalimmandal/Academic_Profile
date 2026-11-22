@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Menu, Moon, Sun, X } from 'lucide-react';
 import type { ThemeMode } from '../hooks/useTheme';
 
-export type RoutePath = 'home' | 'team' | 'research' | 'publications' | 'contact' | 'profile';
+export type RoutePath = 'home' | 'team' | 'research' | 'publications' | 'drive' | 'mail' | 'contact' | 'profile';
 
 interface NavbarProps {
   brandName: string;

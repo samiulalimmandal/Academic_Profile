@@ -190,17 +190,30 @@ export const HomePage: React.FC<HomePageProps> = ({ data, onNavigate }) => {
               Active Research Programs
             </h2>
           </div>
-          <a
-            href="#/research"
-            onClick={(e) => {
-              e.preventDefault();
-              onNavigate('#/research');
-            }}
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-[#1E3A8A] hover:underline whitespace-nowrap shrink-0 dark:text-[#60A5FA]"
-          >
-            <span>All Research Projects</span>
-            <ArrowRight className="h-4 w-4" aria-hidden="true" />
-          </a>
+          <div className="flex flex-wrap items-center gap-5">
+            <a
+              href="#/drive"
+              onClick={(e) => {
+                e.preventDefault();
+                onNavigate('#/drive');
+              }}
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-[#57534E] hover:text-[#1E3A8A] hover:underline whitespace-nowrap shrink-0 dark:text-[#94A3B8] dark:hover:text-[#60A5FA]"
+            >
+              <span>Research Drive</span>
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </a>
+            <a
+              href="#/research"
+              onClick={(e) => {
+                e.preventDefault();
+                onNavigate('#/research');
+              }}
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-[#1E3A8A] hover:underline whitespace-nowrap shrink-0 dark:text-[#60A5FA]"
+            >
+              <span>All Research Projects</span>
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </a>
+          </div>
         </div>
 
         <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">

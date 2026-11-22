@@ -1,10 +1,10 @@
 {
   "group": {
-    "name": "Geo-Spatial Lens",
-    "shortName": "Geo-spatial Lens",
-    "kicker": "Earth Observation, Computational Ecology & Environmental Systems",
-    "tagline": "Interdisciplinary scholarship bridging geospatial sensing, ecological modeling, and resilient environmental infrastructure.",
-    "description": "Meridian Research Collective is an independent four-member academic research group at Horizon Institute of Technology. We investigate urban microclimates, forest canopy dynamics, alpine hydrology, and low-power environmental telemetry through open science and reproducible computational workflows.",
+    "name": "Academic Profile Hub",
+    "shortName": "APH",
+    "kicker": "Connecting Minds, Inspiring Research",
+    "tagline": "A Platform for Scholars and Researchers.",
+    "description": "Academic Profile Hub is a collaborative platform dedicated to showcasing academic profiles, research activities, publications, projects, and achievements. It brings students, scholars, and researchers together in one place to share knowledge, explore ideas, and foster academic collaboration. Our mission is to connect minds, inspire research, and promote a culture of continuous learning and innovation.",
     "institution": "The University of Burdwan",
     "department": "Department of Geospatial Science",
     "location": "Golapbag, Burdwan, Purba Burdwan, 713104",

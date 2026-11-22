@@ -1,21 +1,21 @@
 {
   "group": {
-    "name": "Meridian Research Collective",
-    "shortName": "Meridian Research",
+    "name": "Geo-Spatial Lens",
+    "shortName": "Geo-spatial Lens",
     "kicker": "Earth Observation, Computational Ecology & Environmental Systems",
     "tagline": "Interdisciplinary scholarship bridging geospatial sensing, ecological modeling, and resilient environmental infrastructure.",
     "description": "Meridian Research Collective is an independent four-member academic research group at Horizon Institute of Technology. We investigate urban microclimates, forest canopy dynamics, alpine hydrology, and low-power environmental telemetry through open science and reproducible computational workflows.",
-    "institution": "Horizon Institute of Technology",
-    "department": "School of Earth, Computing & Environmental Sciences",
-    "location": "140 Observatory Way, North Academic Quad, Cambridge, MA 02138",
-    "email": "contact@meridian-research.org",
+    "institution": "The University of Burdwan",
+    "department": "Department of Geospatial Science",
+    "location": "Golapbag, Burdwan, Purba Burdwan, 713104",
+    "email": "geospatiallens@gmail.com",
     "heroImage": "./assets/images/hero-lab.jpg",
-    "establishedYear": "2022"
+    "establishedYear": "2026"
   },
   "members": [
     {
       "id": "aarav-sen",
-      "name": "Dr. Aarav Sen",
+      "name": "Dr. Arnab Sengupta",
       "designation": "Principal Investigator & Associate Professor",
       "department": "Department of Earth & Environmental Sciences",
       "institution": "Horizon Institute of Technology",
